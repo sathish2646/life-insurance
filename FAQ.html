@@ -28,6 +28,29 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+            <style>
+        /* Hide the ugly Google Translate banner */
+        .goog-te-banner-frame.skiptranslate,
+        .goog-logo-link,
+        .goog-te-gadget span {
+            display: none !important;
+        }
+
+        /* Remove font override */
+        .goog-te-gadget {
+            font-family: inherit !important;
+            font-size: 0.95rem;
+        }
+
+        /* Fix spacing in the dropdown */
+        .goog-te-combo {
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            background-color: #f8f9fa;
+        }
+    </style>
+
     </head>
 
     <body>
@@ -63,13 +86,17 @@
                                 <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                             <div class="dropdown ms-3">
-                                <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
+                                <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fas fa-globe-europe text-primary me-2"></i> Language</small></a>
                                 <div class="dropdown-menu rounded">
-                                    <a href="#" class="dropdown-item">English</a>
+                                     <div class="container d-flex justify-content-center">
+                                        <div id="google_translate_element"
+                                            class="bg-white text-dark px-3 py-1 rounded-pill "></div>
+                                    </div>
+                                    <!-- <a href="#" class="dropdown-item">English</a>
                                     <a href="#" class="dropdown-item">Bangla</a>
                                     <a href="#" class="dropdown-item">French</a>
                                     <a href="#" class="dropdown-item">Spanish</a>
-                                    <a href="#" class="dropdown-item">Arabic</a>
+                                    <a href="#" class="dropdown-item">Arabic</a> -->
                                 </div>
                             </div>
                         </div>
@@ -249,13 +276,12 @@
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-xl-3">
                                     <div class="footer-item">
-                                        <h4 class="text-white mb-4">Useful Links</h4>
-                                        <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                                        <a href="#"><i class="fas fa-angle-right me-2"></i> Features</a>
-                                        <a href="#"><i class="fas fa-angle-right me-2"></i> Services</a>
-                                        <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ's</a>
-                                        <a href="#"><i class="fas fa-angle-right me-2"></i> Blogs</a>
-                                        <a href="#"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                                        <a href="contact.html"><i class="fas fa-angle-right me-2 active"></i> Contact</a>
+                                    <a href="about.html"><i class="fas fa-angle-right me-2 active"></i> About Us</a>
+                                    <a href="feature.html"><i class="fas fa-angle-right me-2 active"></i> Features</a>
+                                    <a href="service.html"><i class="fas fa-angle-right me-2 active"></i> Services</a>
+                                    <a href="FAQ.html"><i class="fas fa-angle-right me-2 active"></i> FAQ's</a>
+                                    <a href="blog.html"><i class="fas fa-angle-right me-2 active"></i> Blogs</a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-xl-4">
@@ -423,6 +449,14 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+         <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </body>
 
 </html>
